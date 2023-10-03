@@ -9,7 +9,15 @@ public class PayloadSizeHelper {
 
     public String getPayloadSizeFromRequest(HttpServletRequest request) {
         double sizeInBytes = (double) request.getContentLength();
-        double sizeInMegaBytes = sizeInBytes / (1024 * 1024);
-        return String.format( "%.2f", sizeInMegaBytes);
+        return String.format( "%.2f", getSizeInMegaBytes(sizeInBytes));
+    }
+
+    public String getPayloadSizeFromByteArray(byte[] byreArray) {
+        double sizeInBytes = (double) byreArray.length;
+        return String.format( "%.2f", getSizeInMegaBytes(sizeInBytes));
+    }
+
+    private double getSizeInMegaBytes(double sizeInBytes) {
+        return sizeInBytes / (1024 * 1024);
     }
 }
