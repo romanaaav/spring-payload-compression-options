@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package tutorial;
+
+option java_multiple_files = true;
+option java_package = "com.romanaaav.payloadcompressionexample.proto";
+option java_outer_classname = "NovedadesRequestBodyProto";
+
+message Novedades {
+  optional string name = 1;
+  optional int32 id = 2;
+  optional string email = 3;
+
+  message DatosInspeccion {
+    optional string id = 1;
+    optional string ver = 2;
+    optional string fecha_carga = 3;
+    optional string hora_carga = 4;
+    optional string fecha_insp = 5;
+    optional string hora_insp = 6;
+    optional int32 cant_fotos = 7;
+    optional int32 aseguradora = 8;
+    optional string nro_formulario = 9;
+    optional string nro_insp_tecnored = 10;
+    optional string nro_insp_aseguradora = 11;
+    optional string inspector = 12;
+    optional string formulario = 13;
+    optional string auditada_por = 14;
+    optional int32 id_usuario_barbara = 15;
+    optional string tipo_inspector = 16;
+    optional string cobertura = 17;
+    optional int32 cp = 18;
+    optional string motivo_rechazo_cobertura = 19;
+    optional string resultado_auditoria = 20;
+    optional string latitud = 21;
+    optional string longitud = 22;
+    optional int32 id_repo = 23;
+    optional string url = 24;
+    optional string error_fotos = 25;
+    optional string observaciones_ia = 26;
+    optional int32 alerta_ia = 27;
+  }
+}
