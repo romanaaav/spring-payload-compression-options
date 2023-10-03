@@ -8,47 +8,58 @@ public interface NovedadesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>optional string name = 1;</code>
-   * @return Whether the name field is set.
+   * <code>optional string hash = 1;</code>
+   * @return Whether the hash field is set.
    */
-  boolean hasName();
+  boolean hasHash();
   /**
-   * <code>optional string name = 1;</code>
-   * @return The name.
+   * <code>optional string hash = 1;</code>
+   * @return The hash.
    */
-  java.lang.String getName();
+  java.lang.String getHash();
   /**
-   * <code>optional string name = 1;</code>
-   * @return The bytes for name.
+   * <code>optional string hash = 1;</code>
+   * @return The bytes for hash.
    */
   com.google.protobuf.ByteString
-      getNameBytes();
+      getHashBytes();
 
   /**
-   * <code>optional int32 id = 2;</code>
-   * @return Whether the id field is set.
+   * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+   * @return Whether the datosInspeccion field is set.
    */
-  boolean hasId();
+  boolean hasDatosInspeccion();
   /**
-   * <code>optional int32 id = 2;</code>
-   * @return The id.
+   * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+   * @return The datosInspeccion.
    */
-  int getId();
+  com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion getDatosInspeccion();
+  /**
+   * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+   */
+  com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccionOrBuilder getDatosInspeccionOrBuilder();
 
   /**
-   * <code>optional string email = 3;</code>
-   * @return Whether the email field is set.
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
    */
-  boolean hasEmail();
+  java.util.List<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad> 
+      getFotosList();
   /**
-   * <code>optional string email = 3;</code>
-   * @return The email.
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
    */
-  java.lang.String getEmail();
+  com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad getFotos(int index);
   /**
-   * <code>optional string email = 3;</code>
-   * @return The bytes for email.
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
    */
-  com.google.protobuf.ByteString
-      getEmailBytes();
+  int getFotosCount();
+  /**
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+   */
+  java.util.List<? extends com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder> 
+      getFotosOrBuilderList();
+  /**
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+   */
+  com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder getFotosOrBuilder(
+      int index);
 }

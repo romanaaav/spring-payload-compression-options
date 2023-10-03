@@ -7,9 +7,7 @@ option java_package = "com.romanaaav.payloadcompressionexample.proto";
 option java_outer_classname = "NovedadesRequestBodyProto";
 
 message Novedades {
-  optional string name = 1;
-  optional int32 id = 2;
-  optional string email = 3;
+  optional string hash = 1;
 
   message DatosInspeccion {
     optional string id = 1;
@@ -40,4 +38,14 @@ message Novedades {
     optional string observaciones_ia = 26;
     optional int32 alerta_ia = 27;
   }
+
+  optional DatosInspeccion datos_inspeccion= 2;
+
+  message FotoNovedad {
+    optional string etiqueta = 1;
+    optional string base64 = 2;
+  }
+
+  repeated FotoNovedad fotos = 3;
+
 }

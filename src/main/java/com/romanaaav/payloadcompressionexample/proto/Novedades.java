@@ -16,8 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Novedades() {
-    name_ = "";
-    email_ = "";
+    hash_ = "";
+    fotos_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -4695,118 +4695,874 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
-  public static final int NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  public interface FotoNovedadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:tutorial.Novedades.FotoNovedad)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string etiqueta = 1;</code>
+     * @return Whether the etiqueta field is set.
+     */
+    boolean hasEtiqueta();
+    /**
+     * <code>optional string etiqueta = 1;</code>
+     * @return The etiqueta.
+     */
+    java.lang.String getEtiqueta();
+    /**
+     * <code>optional string etiqueta = 1;</code>
+     * @return The bytes for etiqueta.
+     */
+    com.google.protobuf.ByteString
+        getEtiquetaBytes();
+
+    /**
+     * <code>optional string base64 = 2;</code>
+     * @return Whether the base64 field is set.
+     */
+    boolean hasBase64();
+    /**
+     * <code>optional string base64 = 2;</code>
+     * @return The base64.
+     */
+    java.lang.String getBase64();
+    /**
+     * <code>optional string base64 = 2;</code>
+     * @return The bytes for base64.
+     */
+    com.google.protobuf.ByteString
+        getBase64Bytes();
+  }
   /**
-   * <code>optional string name = 1;</code>
-   * @return Whether the name field is set.
+   * Protobuf type {@code tutorial.Novedades.FotoNovedad}
+   */
+  public static final class FotoNovedad extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:tutorial.Novedades.FotoNovedad)
+      FotoNovedadOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FotoNovedad.newBuilder() to construct.
+    private FotoNovedad(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FotoNovedad() {
+      etiqueta_ = "";
+      base64_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FotoNovedad();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.romanaaav.payloadcompressionexample.proto.NovedadesRequestBodyProto.internal_static_tutorial_Novedades_FotoNovedad_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.romanaaav.payloadcompressionexample.proto.NovedadesRequestBodyProto.internal_static_tutorial_Novedades_FotoNovedad_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.class, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ETIQUETA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object etiqueta_ = "";
+    /**
+     * <code>optional string etiqueta = 1;</code>
+     * @return Whether the etiqueta field is set.
+     */
+    @java.lang.Override
+    public boolean hasEtiqueta() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string etiqueta = 1;</code>
+     * @return The etiqueta.
+     */
+    @java.lang.Override
+    public java.lang.String getEtiqueta() {
+      java.lang.Object ref = etiqueta_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        etiqueta_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string etiqueta = 1;</code>
+     * @return The bytes for etiqueta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEtiquetaBytes() {
+      java.lang.Object ref = etiqueta_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        etiqueta_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE64_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object base64_ = "";
+    /**
+     * <code>optional string base64 = 2;</code>
+     * @return Whether the base64 field is set.
+     */
+    @java.lang.Override
+    public boolean hasBase64() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string base64 = 2;</code>
+     * @return The base64.
+     */
+    @java.lang.Override
+    public java.lang.String getBase64() {
+      java.lang.Object ref = base64_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        base64_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string base64 = 2;</code>
+     * @return The bytes for base64.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBase64Bytes() {
+      java.lang.Object ref = base64_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        base64_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, etiqueta_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, base64_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, etiqueta_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, base64_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad)) {
+        return super.equals(obj);
+      }
+      com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad other = (com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad) obj;
+
+      if (hasEtiqueta() != other.hasEtiqueta()) return false;
+      if (hasEtiqueta()) {
+        if (!getEtiqueta()
+            .equals(other.getEtiqueta())) return false;
+      }
+      if (hasBase64() != other.hasBase64()) return false;
+      if (hasBase64()) {
+        if (!getBase64()
+            .equals(other.getBase64())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEtiqueta()) {
+        hash = (37 * hash) + ETIQUETA_FIELD_NUMBER;
+        hash = (53 * hash) + getEtiqueta().hashCode();
+      }
+      if (hasBase64()) {
+        hash = (37 * hash) + BASE64_FIELD_NUMBER;
+        hash = (53 * hash) + getBase64().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code tutorial.Novedades.FotoNovedad}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:tutorial.Novedades.FotoNovedad)
+        com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.romanaaav.payloadcompressionexample.proto.NovedadesRequestBodyProto.internal_static_tutorial_Novedades_FotoNovedad_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.romanaaav.payloadcompressionexample.proto.NovedadesRequestBodyProto.internal_static_tutorial_Novedades_FotoNovedad_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.class, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder.class);
+      }
+
+      // Construct using com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        etiqueta_ = "";
+        base64_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.romanaaav.payloadcompressionexample.proto.NovedadesRequestBodyProto.internal_static_tutorial_Novedades_FotoNovedad_descriptor;
+      }
+
+      @java.lang.Override
+      public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad getDefaultInstanceForType() {
+        return com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad build() {
+        com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad buildPartial() {
+        com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad result = new com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.etiqueta_ = etiqueta_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.base64_ = base64_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad) {
+          return mergeFrom((com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad other) {
+        if (other == com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.getDefaultInstance()) return this;
+        if (other.hasEtiqueta()) {
+          etiqueta_ = other.etiqueta_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasBase64()) {
+          base64_ = other.base64_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                etiqueta_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                base64_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object etiqueta_ = "";
+      /**
+       * <code>optional string etiqueta = 1;</code>
+       * @return Whether the etiqueta field is set.
+       */
+      public boolean hasEtiqueta() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string etiqueta = 1;</code>
+       * @return The etiqueta.
+       */
+      public java.lang.String getEtiqueta() {
+        java.lang.Object ref = etiqueta_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          etiqueta_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string etiqueta = 1;</code>
+       * @return The bytes for etiqueta.
+       */
+      public com.google.protobuf.ByteString
+          getEtiquetaBytes() {
+        java.lang.Object ref = etiqueta_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          etiqueta_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string etiqueta = 1;</code>
+       * @param value The etiqueta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtiqueta(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        etiqueta_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string etiqueta = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEtiqueta() {
+        etiqueta_ = getDefaultInstance().getEtiqueta();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string etiqueta = 1;</code>
+       * @param value The bytes for etiqueta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtiquetaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        etiqueta_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object base64_ = "";
+      /**
+       * <code>optional string base64 = 2;</code>
+       * @return Whether the base64 field is set.
+       */
+      public boolean hasBase64() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional string base64 = 2;</code>
+       * @return The base64.
+       */
+      public java.lang.String getBase64() {
+        java.lang.Object ref = base64_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          base64_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string base64 = 2;</code>
+       * @return The bytes for base64.
+       */
+      public com.google.protobuf.ByteString
+          getBase64Bytes() {
+        java.lang.Object ref = base64_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          base64_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string base64 = 2;</code>
+       * @param value The base64 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBase64(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        base64_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string base64 = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBase64() {
+        base64_ = getDefaultInstance().getBase64();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string base64 = 2;</code>
+       * @param value The bytes for base64 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBase64Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        base64_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:tutorial.Novedades.FotoNovedad)
+    }
+
+    // @@protoc_insertion_point(class_scope:tutorial.Novedades.FotoNovedad)
+    private static final com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad();
+    }
+
+    public static com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FotoNovedad>
+        PARSER = new com.google.protobuf.AbstractParser<FotoNovedad>() {
+      @java.lang.Override
+      public FotoNovedad parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FotoNovedad> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FotoNovedad> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private int bitField0_;
+  public static final int HASH_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object hash_ = "";
+  /**
+   * <code>optional string hash = 1;</code>
+   * @return Whether the hash field is set.
    */
   @java.lang.Override
-  public boolean hasName() {
+  public boolean hasHash() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>optional string name = 1;</code>
-   * @return The name.
+   * <code>optional string hash = 1;</code>
+   * @return The hash.
    */
   @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
+  public java.lang.String getHash() {
+    java.lang.Object ref = hash_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      name_ = s;
+      hash_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string name = 1;</code>
-   * @return The bytes for name.
+   * <code>optional string hash = 1;</code>
+   * @return The bytes for hash.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
+      getHashBytes() {
+    java.lang.Object ref = hash_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      name_ = b;
+      hash_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int ID_FIELD_NUMBER = 2;
-  private int id_ = 0;
+  public static final int DATOS_INSPECCION_FIELD_NUMBER = 2;
+  private com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion datosInspeccion_;
   /**
-   * <code>optional int32 id = 2;</code>
-   * @return Whether the id field is set.
+   * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+   * @return Whether the datosInspeccion field is set.
    */
   @java.lang.Override
-  public boolean hasId() {
+  public boolean hasDatosInspeccion() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>optional int32 id = 2;</code>
-   * @return The id.
+   * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+   * @return The datosInspeccion.
    */
   @java.lang.Override
-  public int getId() {
-    return id_;
+  public com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion getDatosInspeccion() {
+    return datosInspeccion_ == null ? com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.getDefaultInstance() : datosInspeccion_;
+  }
+  /**
+   * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+   */
+  @java.lang.Override
+  public com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccionOrBuilder getDatosInspeccionOrBuilder() {
+    return datosInspeccion_ == null ? com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.getDefaultInstance() : datosInspeccion_;
   }
 
-  public static final int EMAIL_FIELD_NUMBER = 3;
+  public static final int FOTOS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object email_ = "";
+  private java.util.List<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad> fotos_;
   /**
-   * <code>optional string email = 3;</code>
-   * @return Whether the email field is set.
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
    */
   @java.lang.Override
-  public boolean hasEmail() {
-    return ((bitField0_ & 0x00000004) != 0);
+  public java.util.List<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad> getFotosList() {
+    return fotos_;
   }
   /**
-   * <code>optional string email = 3;</code>
-   * @return The email.
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
    */
   @java.lang.Override
-  public java.lang.String getEmail() {
-    java.lang.Object ref = email_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      email_ = s;
-      return s;
-    }
+  public java.util.List<? extends com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder> 
+      getFotosOrBuilderList() {
+    return fotos_;
   }
   /**
-   * <code>optional string email = 3;</code>
-   * @return The bytes for email.
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEmailBytes() {
-    java.lang.Object ref = email_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      email_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public int getFotosCount() {
+    return fotos_.size();
+  }
+  /**
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+   */
+  @java.lang.Override
+  public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad getFotos(int index) {
+    return fotos_.get(index);
+  }
+  /**
+   * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+   */
+  @java.lang.Override
+  public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder getFotosOrBuilder(
+      int index) {
+    return fotos_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -4824,13 +5580,13 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeInt32(2, id_);
+      output.writeMessage(2, getDatosInspeccion());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
+    for (int i = 0; i < fotos_.size(); i++) {
+      output.writeMessage(3, fotos_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -4842,14 +5598,15 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, id_);
+        .computeMessageSize(2, getDatosInspeccion());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
+    for (int i = 0; i < fotos_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, fotos_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4866,21 +5623,18 @@ private static final long serialVersionUID = 0L;
     }
     com.romanaaav.payloadcompressionexample.proto.Novedades other = (com.romanaaav.payloadcompressionexample.proto.Novedades) obj;
 
-    if (hasName() != other.hasName()) return false;
-    if (hasName()) {
-      if (!getName()
-          .equals(other.getName())) return false;
+    if (hasHash() != other.hasHash()) return false;
+    if (hasHash()) {
+      if (!getHash()
+          .equals(other.getHash())) return false;
     }
-    if (hasId() != other.hasId()) return false;
-    if (hasId()) {
-      if (getId()
-          != other.getId()) return false;
+    if (hasDatosInspeccion() != other.hasDatosInspeccion()) return false;
+    if (hasDatosInspeccion()) {
+      if (!getDatosInspeccion()
+          .equals(other.getDatosInspeccion())) return false;
     }
-    if (hasEmail() != other.hasEmail()) return false;
-    if (hasEmail()) {
-      if (!getEmail()
-          .equals(other.getEmail())) return false;
-    }
+    if (!getFotosList()
+        .equals(other.getFotosList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4892,17 +5646,17 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasName()) {
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
+    if (hasHash()) {
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
     }
-    if (hasId()) {
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+    if (hasDatosInspeccion()) {
+      hash = (37 * hash) + DATOS_INSPECCION_FIELD_NUMBER;
+      hash = (53 * hash) + getDatosInspeccion().hashCode();
     }
-    if (hasEmail()) {
-      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getEmail().hashCode();
+    if (getFotosCount() > 0) {
+      hash = (37 * hash) + FOTOS_FIELD_NUMBER;
+      hash = (53 * hash) + getFotosList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -5023,21 +5777,38 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.romanaaav.payloadcompressionexample.proto.Novedades.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDatosInspeccionFieldBuilder();
+        getFotosFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      name_ = "";
-      id_ = 0;
-      email_ = "";
+      hash_ = "";
+      datosInspeccion_ = null;
+      if (datosInspeccionBuilder_ != null) {
+        datosInspeccionBuilder_.dispose();
+        datosInspeccionBuilder_ = null;
+      }
+      if (fotosBuilder_ == null) {
+        fotos_ = java.util.Collections.emptyList();
+      } else {
+        fotos_ = null;
+        fotosBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -5064,25 +5835,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.romanaaav.payloadcompressionexample.proto.Novedades buildPartial() {
       com.romanaaav.payloadcompressionexample.proto.Novedades result = new com.romanaaav.payloadcompressionexample.proto.Novedades(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.romanaaav.payloadcompressionexample.proto.Novedades result) {
+      if (fotosBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          fotos_ = java.util.Collections.unmodifiableList(fotos_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.fotos_ = fotos_;
+      } else {
+        result.fotos_ = fotosBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.romanaaav.payloadcompressionexample.proto.Novedades result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.name_ = name_;
+        result.hash_ = hash_;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.id_ = id_;
+        result.datosInspeccion_ = datosInspeccionBuilder_ == null
+            ? datosInspeccion_
+            : datosInspeccionBuilder_.build();
         to_bitField0_ |= 0x00000002;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.email_ = email_;
-        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -5131,18 +5913,39 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.romanaaav.payloadcompressionexample.proto.Novedades other) {
       if (other == com.romanaaav.payloadcompressionexample.proto.Novedades.getDefaultInstance()) return this;
-      if (other.hasName()) {
-        name_ = other.name_;
+      if (other.hasHash()) {
+        hash_ = other.hash_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasId()) {
-        setId(other.getId());
+      if (other.hasDatosInspeccion()) {
+        mergeDatosInspeccion(other.getDatosInspeccion());
       }
-      if (other.hasEmail()) {
-        email_ = other.email_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (fotosBuilder_ == null) {
+        if (!other.fotos_.isEmpty()) {
+          if (fotos_.isEmpty()) {
+            fotos_ = other.fotos_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureFotosIsMutable();
+            fotos_.addAll(other.fotos_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.fotos_.isEmpty()) {
+          if (fotosBuilder_.isEmpty()) {
+            fotosBuilder_.dispose();
+            fotosBuilder_ = null;
+            fotos_ = other.fotos_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            fotosBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFotosFieldBuilder() : null;
+          } else {
+            fotosBuilder_.addAllMessages(other.fotos_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -5171,18 +5974,28 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              name_ = input.readStringRequireUtf8();
+              hash_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              id_ = input.readInt32();
+            case 18: {
+              input.readMessage(
+                  getDatosInspeccionFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             case 26: {
-              email_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad m =
+                  input.readMessage(
+                      com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.parser(),
+                      extensionRegistry);
+              if (fotosBuilder_ == null) {
+                ensureFotosIsMutable();
+                fotos_.add(m);
+              } else {
+                fotosBuilder_.addMessage(m);
+              }
               break;
             } // case 26
             default: {
@@ -5202,202 +6015,444 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object name_ = "";
+    private java.lang.Object hash_ = "";
     /**
-     * <code>optional string name = 1;</code>
-     * @return Whether the name field is set.
+     * <code>optional string hash = 1;</code>
+     * @return Whether the hash field is set.
      */
-    public boolean hasName() {
+    public boolean hasHash() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional string name = 1;</code>
-     * @return The name.
+     * <code>optional string hash = 1;</code>
+     * @return The hash.
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        hash_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string name = 1;</code>
-     * @return The bytes for name.
+     * <code>optional string hash = 1;</code>
+     * @return The bytes for hash.
      */
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getHashBytes() {
+      java.lang.Object ref = hash_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        hash_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string name = 1;</code>
-     * @param value The name to set.
+     * <code>optional string hash = 1;</code>
+     * @param value The hash to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
+    public Builder setHash(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      name_ = value;
+      hash_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string name = 1;</code>
+     * <code>optional string hash = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
+    public Builder clearHash() {
+      hash_ = getDefaultInstance().getHash();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>optional string name = 1;</code>
-     * @param value The bytes for name to set.
+     * <code>optional string hash = 1;</code>
+     * @param value The bytes for hash to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
+    public Builder setHashBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      name_ = value;
+      hash_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private int id_ ;
+    private com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion datosInspeccion_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion, com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.Builder, com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccionOrBuilder> datosInspeccionBuilder_;
     /**
-     * <code>optional int32 id = 2;</code>
-     * @return Whether the id field is set.
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     * @return Whether the datosInspeccion field is set.
      */
-    @java.lang.Override
-    public boolean hasId() {
+    public boolean hasDatosInspeccion() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 id = 2;</code>
-     * @return The id.
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     * @return The datosInspeccion.
      */
-    @java.lang.Override
-    public int getId() {
-      return id_;
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion getDatosInspeccion() {
+      if (datosInspeccionBuilder_ == null) {
+        return datosInspeccion_ == null ? com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.getDefaultInstance() : datosInspeccion_;
+      } else {
+        return datosInspeccionBuilder_.getMessage();
+      }
     }
     /**
-     * <code>optional int32 id = 2;</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
      */
-    public Builder setId(int value) {
-
-      id_ = value;
+    public Builder setDatosInspeccion(com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion value) {
+      if (datosInspeccionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        datosInspeccion_ = value;
+      } else {
+        datosInspeccionBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 id = 2;</code>
-     * @return This builder for chaining.
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
      */
-    public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      id_ = 0;
+    public Builder setDatosInspeccion(
+        com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.Builder builderForValue) {
+      if (datosInspeccionBuilder_ == null) {
+        datosInspeccion_ = builderForValue.build();
+      } else {
+        datosInspeccionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+    /**
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     */
+    public Builder mergeDatosInspeccion(com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion value) {
+      if (datosInspeccionBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          datosInspeccion_ != null &&
+          datosInspeccion_ != com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.getDefaultInstance()) {
+          getDatosInspeccionBuilder().mergeFrom(value);
+        } else {
+          datosInspeccion_ = value;
+        }
+      } else {
+        datosInspeccionBuilder_.mergeFrom(value);
+      }
+      if (datosInspeccion_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     */
+    public Builder clearDatosInspeccion() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      datosInspeccion_ = null;
+      if (datosInspeccionBuilder_ != null) {
+        datosInspeccionBuilder_.dispose();
+        datosInspeccionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     */
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.Builder getDatosInspeccionBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getDatosInspeccionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     */
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccionOrBuilder getDatosInspeccionOrBuilder() {
+      if (datosInspeccionBuilder_ != null) {
+        return datosInspeccionBuilder_.getMessageOrBuilder();
+      } else {
+        return datosInspeccion_ == null ?
+            com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.getDefaultInstance() : datosInspeccion_;
+      }
+    }
+    /**
+     * <code>optional .tutorial.Novedades.DatosInspeccion datos_inspeccion = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion, com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.Builder, com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccionOrBuilder> 
+        getDatosInspeccionFieldBuilder() {
+      if (datosInspeccionBuilder_ == null) {
+        datosInspeccionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion, com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccion.Builder, com.romanaaav.payloadcompressionexample.proto.Novedades.DatosInspeccionOrBuilder>(
+                getDatosInspeccion(),
+                getParentForChildren(),
+                isClean());
+        datosInspeccion_ = null;
+      }
+      return datosInspeccionBuilder_;
     }
 
-    private java.lang.Object email_ = "";
-    /**
-     * <code>optional string email = 3;</code>
-     * @return Whether the email field is set.
-     */
-    public boolean hasEmail() {
-      return ((bitField0_ & 0x00000004) != 0);
+    private java.util.List<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad> fotos_ =
+      java.util.Collections.emptyList();
+    private void ensureFotosIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        fotos_ = new java.util.ArrayList<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad>(fotos_);
+        bitField0_ |= 0x00000004;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder> fotosBuilder_;
+
     /**
-     * <code>optional string email = 3;</code>
-     * @return The email.
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
      */
-    public java.lang.String getEmail() {
-      java.lang.Object ref = email_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        email_ = s;
-        return s;
+    public java.util.List<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad> getFotosList() {
+      if (fotosBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fotos_);
       } else {
-        return (java.lang.String) ref;
+        return fotosBuilder_.getMessageList();
       }
     }
     /**
-     * <code>optional string email = 3;</code>
-     * @return The bytes for email.
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getEmailBytes() {
-      java.lang.Object ref = email_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        email_ = b;
-        return b;
+    public int getFotosCount() {
+      if (fotosBuilder_ == null) {
+        return fotos_.size();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return fotosBuilder_.getCount();
       }
     }
     /**
-     * <code>optional string email = 3;</code>
-     * @param value The email to set.
-     * @return This builder for chaining.
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
      */
-    public Builder setEmail(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      email_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad getFotos(int index) {
+      if (fotosBuilder_ == null) {
+        return fotos_.get(index);
+      } else {
+        return fotosBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder setFotos(
+        int index, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad value) {
+      if (fotosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFotosIsMutable();
+        fotos_.set(index, value);
+        onChanged();
+      } else {
+        fotosBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>optional string email = 3;</code>
-     * @return This builder for chaining.
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
      */
-    public Builder clearEmail() {
-      email_ = getDefaultInstance().getEmail();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
+    public Builder setFotos(
+        int index, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder builderForValue) {
+      if (fotosBuilder_ == null) {
+        ensureFotosIsMutable();
+        fotos_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fotosBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
-     * <code>optional string email = 3;</code>
-     * @param value The bytes for email to set.
-     * @return This builder for chaining.
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
      */
-    public Builder setEmailBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      email_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
+    public Builder addFotos(com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad value) {
+      if (fotosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFotosIsMutable();
+        fotos_.add(value);
+        onChanged();
+      } else {
+        fotosBuilder_.addMessage(value);
+      }
       return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder addFotos(
+        int index, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad value) {
+      if (fotosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFotosIsMutable();
+        fotos_.add(index, value);
+        onChanged();
+      } else {
+        fotosBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder addFotos(
+        com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder builderForValue) {
+      if (fotosBuilder_ == null) {
+        ensureFotosIsMutable();
+        fotos_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fotosBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder addFotos(
+        int index, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder builderForValue) {
+      if (fotosBuilder_ == null) {
+        ensureFotosIsMutable();
+        fotos_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fotosBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder addAllFotos(
+        java.lang.Iterable<? extends com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad> values) {
+      if (fotosBuilder_ == null) {
+        ensureFotosIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fotos_);
+        onChanged();
+      } else {
+        fotosBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder clearFotos() {
+      if (fotosBuilder_ == null) {
+        fotos_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        fotosBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public Builder removeFotos(int index) {
+      if (fotosBuilder_ == null) {
+        ensureFotosIsMutable();
+        fotos_.remove(index);
+        onChanged();
+      } else {
+        fotosBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder getFotosBuilder(
+        int index) {
+      return getFotosFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder getFotosOrBuilder(
+        int index) {
+      if (fotosBuilder_ == null) {
+        return fotos_.get(index);  } else {
+        return fotosBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public java.util.List<? extends com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder> 
+         getFotosOrBuilderList() {
+      if (fotosBuilder_ != null) {
+        return fotosBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(fotos_);
+      }
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder addFotosBuilder() {
+      return getFotosFieldBuilder().addBuilder(
+          com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder addFotosBuilder(
+        int index) {
+      return getFotosFieldBuilder().addBuilder(
+          index, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .tutorial.Novedades.FotoNovedad fotos = 3;</code>
+     */
+    public java.util.List<com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder> 
+         getFotosBuilderList() {
+      return getFotosFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder> 
+        getFotosFieldBuilder() {
+      if (fotosBuilder_ == null) {
+        fotosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedad.Builder, com.romanaaav.payloadcompressionexample.proto.Novedades.FotoNovedadOrBuilder>(
+                fotos_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        fotos_ = null;
+      }
+      return fotosBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
